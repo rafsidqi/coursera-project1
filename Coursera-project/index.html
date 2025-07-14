@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelBloom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center bg-blue-600 text-white px-6 py-4 sticky top-0 w-full z-50 shadow backdrop-blur-sm bg-blue-600/80">
+        <div class="flex items-center space-x-2">
+            <i class="fa fa-plane fa-2x"></i>
+            <span class="text-xl font-bold">TravelBloom</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+            <a href="#Home" class="hover:text-blue-200">Home</a>
+            <a href="#About" class="hover:text-blue-200">About Us</a>
+            <a href="#Contactus" class="hover:text-blue-200">Contact Us</a>
+        </div>
+        <div class="flex items-center space-x-2">
+            <input id="searchinput" type="text" placeholder="Enter a destination or keyword" class="px-2 py-1 rounded border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            <button id="searchbtn" class="bg-blue-500 hover:bg-blue-700 text-white px-3 py-1 rounded">Search</button>
+            <button id="clearbtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-3 py-1 rounded">Clear</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="mt-6 px-6 bg-cover bg-fixed bg-center" style="background-image: url('city.jpg');">
+        <!-- Home Section -->
+        <section id="Home" class="text-center py-24 bg-white/70 rounded-lg shadow backdrop-blur-sm">
+            <h1 class="text-4xl md:text-6xl font-bold text-blue-600 mb-4">Discover Your Next Adventure</h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-6">Personalized recommendations for beaches, temples, and cities. Plan your perfect trip today.</p>
+            <button class="bg-blue-600 hover:bg-blue-800 text-white px-6 py-3 rounded-full shadow">Get Started</button>
+        </section>
+
+        <!-- About Section -->
+        <section id="About" class="bg-gray-50/90 py-12 px-4 rounded-lg shadow mb-8 backdrop-blur-sm">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">About Us</h2>
+            <p class="text-gray-700">TravelBloom is your gateway to unforgettable journeys. We are passionate about helping travelers find the best destinations tailored to their interests. Explore beaches, temples, cities, and more with detailed insights and multimedia content.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="Contactus" class="bg-gray-50/90 py-12 px-4 rounded-lg shadow backdrop-blur-sm">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">Contact Us</h2>
+            <form class="space-y-4 max-w-lg mx-auto">
+                <div>
+                    <label for="name" class="block text-gray-700 font-medium">First Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 font-medium">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700 font-medium">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 rounded shadow">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex justify-center space-x-4 py-6 bg-blue-600 text-white">
+        <a href="https://twitter.com/?lang=en" target="_blank" class="hover:text-blue-200"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" class="hover:text-blue-200"><i class="fa fa-facebook fa-2x"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="hover:text-blue-200"><i class="fa fa-instagram fa-2x"></i></a>
+        <a href="https://www.youtube.com/" target="_blank" class="hover:text-blue-200"><i class="fa fa-youtube-play fa-2x"></i></a>
+    </footer>
+
+    <!-- Dropdown Results -->
+    <div id="dropdown" class="hidden fixed right-4 top-24 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-96 backdrop-blur-sm">
+        <div class="flex justify-end mb-2">
+            <button id="close-btn" class="text-gray-500 hover:text-red-500">X</button>
+        </div>
+        <div id="resultContainer" class="text-gray-800">
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="travelrecommendation.js"></script>
+</body>
+</html>
